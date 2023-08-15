@@ -18,6 +18,10 @@ namespace HotelProject.WebApi.Extensions
                 opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
             services.AddScoped<IStaffDal, EfStaffDal>();
+            services.AddScoped<ISubscribeDal, EfSubscribeDal>();
+            services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+            services.AddScoped<IServiceDal, EfServiceDal>();
+            services.AddScoped<IRoomDal, EfRoomDal>();
 
 
             services.AddCors(opt =>
