@@ -28,6 +28,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseCors("HotelApiCors");
+
 app.MapControllers();
 
 using var scope = app.Services.CreateScope();

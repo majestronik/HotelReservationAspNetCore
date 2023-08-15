@@ -15,18 +15,18 @@ namespace HotelProject.WebApi.Extensions
             services.AddSwaggerGen();
             services.AddDbContext<Context>(opt =>
             {
-                opt.UseSqlServer("server=.\\SQLExpress;initial catalog=ApiDb;integrated security=true;TrustServerCertificate=True;");
+                opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
             services.AddScoped<IStaffDal, EfStaffDal>();
 
 
-            // services.AddCors(opt =>
-            // {
-            //     opt.AddPolicy("CorsPolicy", policy =>
-            //     {
-            //         policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:5000");
-            //     });
-            // });
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("HotelApiCors", policy =>
+                {
+                    policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                });
+            });
 
 
             return services;

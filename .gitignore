@@ -5,3 +5,9 @@ debug
 packages
 refint
 .vscode
+css
+icons
+images
+js
+plugins
+*.html
