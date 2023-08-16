@@ -1,0 +1,20 @@
+@model AddStaffViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<form method="post">
+    <label for="">Staff Name</label>
+    <input type="text" asp-for="Name" class="form-control">
+    <br>
+    <label for="">Staff Title</label>
+    <input type="text" asp-for="Title" class="form-control">
+    <br>
+    <label for="">Staff Social Media 1</label>
+    <input type="text" asp-for="SocialMedia1" class="form-control">
+    <br>
+    <button type="submit" class="btn mb-1 btn-info">Add New Staff</button>
+</form>

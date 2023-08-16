@@ -32,7 +32,7 @@ namespace HotelProject.WebApi.Controllers
             _subscribeService.Insert(Subscribe);
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteSubscribe(int id)
         {
             var val = _subscribeService.GetById(id);

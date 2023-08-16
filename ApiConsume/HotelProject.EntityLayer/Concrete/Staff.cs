@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace HotelProject.EntityLayer.Concrete
 {
     public class Staff

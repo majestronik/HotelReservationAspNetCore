@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HotelProject.WebApi.Extensions
 {
-    public static class ApplicationServiceExtensions
+    public static class ApiServiceExtensions
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddApiServices(this IServiceCollection services, IConfiguration config)
         {
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
