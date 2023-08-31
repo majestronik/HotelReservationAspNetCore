@@ -1,0 +1,24 @@
+@model UpdateTestimonialViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label for="">Testimonial Name</label>
+    <input type="text" asp-for="Name" class="form-control">
+    <br>
+    <label for="">Testimonial Title</label>
+    <input type="text" asp-for="Title" class="form-control">
+    <br>
+    <label for="">Testimonial Description</label>
+    <input type="text" asp-for="Description" class="form-control">
+    <br>
+    <label for="">Testimonial Image</label>
+    <input type="text" asp-for="Image" class="form-control">
+    <br>
+    <label for="">Testimonial Description</label>
+    <input type="text" asp-for="Description" class="form-control">
+    <button type="submit" class="btn mt-3 btn-outline-success">Update</button>
+    <input type="hidden" asp-for="Id" class="form-control">
+</form>

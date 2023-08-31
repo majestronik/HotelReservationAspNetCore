@@ -22,7 +22,7 @@ namespace HotelProject.WebApi.Extensions
             services.AddScoped<ITestimonialDal, EfTestimonialDal>();
             services.AddScoped<IServiceDal, EfServiceDal>();
             services.AddScoped<IRoomDal, EfRoomDal>();
-
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddCors(opt =>
             {
@@ -31,7 +31,6 @@ namespace HotelProject.WebApi.Extensions
                     policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
                 });
             });
-
 
             return services;
         }

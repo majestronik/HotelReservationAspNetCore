@@ -1,3 +1,4 @@
+using AutoMapper;
 using HotelProject.DataAccessLayer.Abstact;
 using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
@@ -45,7 +46,5 @@ namespace HotelProject.WebApi.Controllers
             _roomService.Update(Room);
             return Ok();
         }
-
-
     }
 }
